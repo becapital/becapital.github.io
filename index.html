@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEROPROXY - 隐私政策</title>
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-bg);
+        }
+        
+        h3 {
+            color: #555;
+            margin: 1.2rem 0 0.8rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .permission {
+            background-color: var(--light-bg);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .permission h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .highlight {
+            background-color: #fff8e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .contact-info {
+            background-color: #e8f5e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 1.5rem;
+            }
+            
+            .content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ZEROPROXY 隐私政策</h1>
+        <p class="last-updated">最后更新日期：2025年8月28日</p>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="highlight">
+                <p><strong>重要提示：</strong> 本扩展是一个在您本地设备上运行的客户端工具。我们不运营任何中央服务器，也不会收集、存储或传输您的个人身份信息或浏览数据。</p>
+            </div>
+            
+            <h2>1. 信息收集与使用</h2>
+            <p>本扩展仅出于核心功能所需，在您的浏览器本地处理极其有限的信息。我们不会将任何此类信息发送到我们自己的服务器。</p>
+            
+            <div class="permission">
+                <h3>Proxy 权限</h3>
+                <p><strong>用途：</strong> 此权限对于实现本扩展的核心代理功能（包括直连模式、全局代理模式和自动代理模式）是必需的。</p>
+                <p><strong>数据处理：</strong> 此权限允许本扩展根据您的设置重定向您的网络流量。所有流量重定向操作仅在您的本地设备上完成。我们不会记录、监控、存储或传输您的任何网络流量内容（如您访问的网址、搜索查询、输入的表单数据等）。</p>
+            </div>
+            
+            <div class="permission">
+                <h3>Storage 权限</h3>
+                <p><strong>用途：</strong> 此权限用于保存和调用您在本扩展中进行的个人配置和设置。</p>
+                <p><strong>数据处理：</strong> 您的所有配置（例如，您选择的代理模式、自定义规则等）都仅存储在您本地设备的浏览器存储区域中。这些数据永远不会被自动同步或传输给我们或任何第三方（除非您使用了浏览器的同步功能，如Chrome Sync，则该过程受Google隐私政策的约束）。</p>
+            </div>
+            
+            <div class="permission">
+                <h3>Host Permissions (例如：https://raw.githubusercontent.com/*)</h3>
+                <p><strong>用途：</strong> 此权限仅用于从您指定的公开GitHub仓库（或其他您配置的规则源）获取和更新中国域名白名单规则列表。</p>
+                <p><strong>数据处理：</strong> 本扩展会访问上述公共URL以拉取规则文件。这个过程不涉及传输您的任何个人数据或浏览历史。我们拉取的是公开的、非个人的域名列表。您的浏览器可能会在此过程中将您的IP地址发送给GitHub（作为任何常规网页请求的一部分），此行为受GitHub隐私政策的约束。</p>
+            </div>
+            
+            <h2>2. 数据共享与披露</h2>
+            <p>我们不会出售、交易或以其他方式将您的任何信息转让给外部第三方。由于我们首先就不收集任何个人数据，因此没有任何数据可供共享或披露。</p>
+            
+            <h2>3. 数据安全</h2>
+            <p>我们采用行业标准实践来保护您存储在本地的配置信息，但由于所有数据都存储在您的本地设备上，您设备的安全性对于防止未经授权的访问也至关重要。</p>
+            
+            <h2>4. 您的权利</h2>
+            <p>由于您的所有数据都存储在本地，您拥有对其的完全控制权。您可以随时通过本扩展的选项页面查看、修改或清除您的所有配置数据。</p>
+            
+            <h2>5. 隐私政策的变更</h2>
+            <p>我们可能会不时更新本隐私政策。任何更改都会在本页面发布更新后的隐私政策，并更新顶部的"最后更新日期"。建议您定期查看本政策以了解任何变更。</p>
+            
+            <div class="contact-info">
+                <h2>6. 联系我们</h2>
+                <p>如果您对本隐私政策或本扩展的数据处理方式有任何疑问，请通过以下方式联系我们：</p>
+                <p>电子邮件: <a href="mailto:zh.dayong@gmail.com">zh.dayong@gmail.com</a></p>
+                <p>QQ: 1005516669</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 ZEROPROXY Chrome扩展。保留所有权利。</p>
+        </footer>
+    </div>
+</body>
+</html>
